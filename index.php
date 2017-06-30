@@ -5,6 +5,7 @@
 		<link rel="stylesheet" href="style.css">
 		<script src="script.js"></script>
 		<script src="jquery.js"></script>
+		<script src="generate_script.js"></script>
 	</head>	
 
 	<body >
@@ -14,14 +15,14 @@
 			<div class="w3-container w3-card-4 	 w3-center w3-pink"> 
 				<p>
 				
-				<div id="num_words">
-					Number of words 
+				<div id="num_words" class="w3-large">
 					<?php
 						include 'connect_2_db.php';
 						$sql =	"SELECT * FROM parole";
 						$result=$conn->query($sql);
 						echo  $result->num_rows;
 					?>
+					words
 				</div>
 				</p>
 			</div>
@@ -57,16 +58,16 @@
 								<div class="w3-display-container w3-cell" style="width:200px;height:60px;border:solid 0px"><div class="w3-display-middle"><input type="submit" onclick="add_to_base()" value="Submit" class="w3-btn w3-blue "></div> </div>
 								<div class="w3-display-container w3-cell" style="width:200px;height:60px;border:solid 0px;">
 									<div class="w3-display-middle">
-										<select class="w3-blue w3-select" name="option" style="width:150px;">
+										<select id="nature" class="w3-blue w3-select" name="option" style="width:150px;">
 											 <option value="0" disabled selected >Nature</option>
-											 <option value="1" class="w3-large">Verbo</option>
-											 <option value="2" class="w3-large">Nome</option>
-											 <option value="3" class="w3-large">Aggettivo</option>
-											 <option value="4" class="w3-large">Avverbio</option> 
-											 <option value="5" class="w3-large">Articolo</option> 
-											 <option value="6" class="w3-large">Pronome</option> 
-											 <option value="7" class="w3-large">Preposizione</option> 
-											 <option value="8" class="w3-large">Congiunzione</option> 
+											 <option value="Verbo" class="w3-large">Verbo</option>
+											 <option value="Nome" class="w3-large">Nome</option>
+											 <option value="Aggettivo" class="w3-large">Aggettivo</option>
+											 <option value="Avverbio" class="w3-large">Avverbio</option> 
+											 <option value="Articolo" class="w3-large">Articolo</option> 
+											 <option value="Pronome" class="w3-large">Pronome</option> 
+											 <option value="Preposizione" class="w3-large">Preposizione</option> 
+											 <option value="Congiunzione" class="w3-large">Congiunzione</option> 
 											 
 										</select>
 									</div>
@@ -82,6 +83,7 @@
 					<tr>
 						<th>Italian Word</th>
 						<th>English Translation</th>
+						<th>Nature</th>
 						<th>Entry Date</th>
 					</tr>
 					
@@ -92,9 +94,10 @@
 	
 						while ($row=$result->fetch_array()){
 							echo "<tr>";
-							echo "<td>" ,  $row["parola"] , "</td>";
-							echo "<td>" ,  $row["english"] ,  "</td>";
-							echo "<td>" ,  $row["data"]   , "</td>";
+							echo "<td>" ,  $row["parola"]  , "</td>";
+							echo "<td>" ,  $row["english"] , "</td>";
+							echo "<td>" ,  $row["natura"]  , "</td>";
+							echo "<td>" ,  $row["data"]    , "</td>";
 							echo "</tr>";
 							}
 

@@ -10,7 +10,7 @@ function mycallback(response)
     var date      = jresult.data;
     var num       = jresult.numero;
     var num_words = jresult.num_words;
-    var table     = document.getElementById("mytable");
+    var table     = document.getElementById("main-table");
     var row       = table.insertRow(1);
     var cell1     = row.insertCell(0);
     var cell2     = row.insertCell(1);
@@ -32,23 +32,29 @@ function mycallback(response)
 function add_to_base() {
   var english = document.getElementById("en_word").value;
   var italian = document.getElementById("it_word").value;
+  var nature  = document.getElementById("nature").value;
+  
   document.getElementById("en_word").value   = " ";
-  document.getElementById("it_word").value = " ";
-  var dataString = 'parola=' + italian + '&english=' + english; // php GET request that will be included in URL
+  document.getElementById("it_word").value   = " ";
+  var dataString = 'parola=' + italian + '&english=' + english +'&nature='+nature; // php GET request that will be included in URL
+  
   if (italian == '' || english == '') {
     alert("Please Fill All Fields");
   } 
   else {
+    if (nature==0){alert("Select the Nature of the word");}
+    else{
     // AJAX code to submit form.
-    $.ajax({
-      type: "GET",
-      url: "add.php",
-      data: dataString,
-      cache: false,
-      success: function(response){
-      mycallback(response);
-      }
-    });
+        $.ajax({
+        type: "GET",
+        url: "add.php",
+        data: dataString,
+        cache: false,
+        success: function(response){
+        mycallback(response);
+        }
+      });
+    }
   }
   return false;
 }

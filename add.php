@@ -3,9 +3,10 @@
 	
 	$english = $_GET['english'];
 	$parola  = $_GET['parola'];
+	$nature  = $_GET['nature'];
 	include 'connect_2_db.php';
-	$output  = array("parola","english","data","numero","num_words","existence"); 
-	$sql_insrt    = "INSERT INTO parole (parola,english,data) VALUES ('$parola','$english',now())";
+	$output  = array("parola","english","data","numero","num_words","existence","nature"); 
+	$sql_insrt    = "INSERT INTO parole (parola,english,data,natura) VALUES ('$parola','$english',now(),'$nature')";
 	$sql_slct_last = "SELECT * FROM parole ORDER BY numero DESC LIMIT 1";
 	$sql_slct_all = "SELECT * FROM parole";
 	$sql_existence_test = "SELECT * from parole WHERE english='$english' AND parola='$parola'";
@@ -21,6 +22,7 @@
 		$output['english']   = $last_row['english'];
 		$output['data']      = $last_row['data'];
 		$output['num_words'] = $num_words;
+		$output['nature']    = $nature;
 	}
 	else {
 		$output["existence"]=1;
