@@ -11,7 +11,7 @@
 		<script src="dist/chartist.min.js"></script>
 	</head>	
 
-	<body onload="pie_init()">
+	<body onload="chart_init()">
 		
 		<div class="w3-panel main ">
 										
@@ -39,12 +39,12 @@
 				<div class="w3-cell w3-display-container" style="width:100%;"> <!-- Genratate + input -->
 				
 					<div> <!-- Generate word Section-->
-						<div class="w3-panel w3-card-4" style="width:100%;" >
+						<div class="w3-panel w3-card-2" style="width:100%;" >
 						<div>
 							<div>
 								<div>
 									<div class="w3-display-container w3-cell" style="width:150px;height:60px;"> <div class="w3-display-middle"> <button class="w3-btn w3-blue">Generate</button> </div> </div>
-									<div class="w3-display-container w3-cell" style="width:200px;height:60px;"> <div class="w3-display-middle"> <div class="w3-cell w3-center w3-margin-left w3-container" style="width:200px;" > <input type="text" class="w3-input w3-display-center"  placeholder="" style="width:150px;"> </div> </div> </div>
+									<div class="w3-display-container w3-cell" style="width:250px;height:60px;"> <div class="w3-display-middle"> <div class="w3-cell w3-center w3-margin-left w3-container" style="width:250px;" > <input type="text" class="w3-input w3-display-center"  placeholder="" style="width:200px;;"> </div> </div> </div>
 								</div>
 								<div>
 									<div class="w3-display-container w3-cell" style="width:150px;height:60px;"> <div class="w3-display-middle"> <button class="w3-btn w3-blue">Check</button> </div> </div>
@@ -58,7 +58,7 @@
 					<div> <!-- Input a new word Section -->
 					
 					<div style="width:100%;">
-						<form class="w3-panel w3-card-4">
+						<form class="w3-panel w3-card-2 ">
 							<p>
 							<label>Italian Word</label>
 							<input id="it_word" type="text" name="Parola" class="w3-input w3-border">
@@ -81,7 +81,7 @@
 											 <option value="Articolo" class="w3-large">Articolo</option> 
 											 <option value="Pronome" class="w3-large">Pronome</option> 
 											 <option value="Preposizione" class="w3-large">Preposizione</option> 
-											 <option value="Congiunzione" class="w3-large">Congiunzione</option> 
+											 <option value="Congiunzione" class="w3-large">Coniugazione</option> 
 											 
 										</select>
 									</div>
@@ -95,7 +95,7 @@
 				
 				<div class="w3-cell" style="border:solid 0px;padding-left:20px;"> <!--Pie Chart Section-->
 					
-					<div class="w3-card-4 w3-panel w3-center">
+					<div class="w3-card-2 w3-panel w3-center">
 						<div class="ct-chart" id="chart1"></div>
 					</div>
 				
@@ -105,8 +105,8 @@
 
 
 
-			<div id="main-table" >
-				<table  class="w3-table w3-striped w3-hoverable w3-border w3-card-4">
+			<div id="main-table" > <!-- Table of words -->
+				<table  class="w3-table w3-striped w3-hoverable w3-border">
 					<tr>
 						<th>Italian Word</th>
 						<th>English Translation</th>
@@ -132,7 +132,7 @@
 					?>
 				</table>
 				
-			</div>
+			</div> <!-- End table of words -->
 
 		</div>
 	
