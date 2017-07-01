@@ -3,12 +3,15 @@
 	
 	<head>
 		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="dist/chartist.min.css">
 		<script src="script.js"></script>
+		<script src="charts_init.js"></script>
 		<script src="jquery.js"></script>
 		<script src="generate_script.js"></script>
+		<script src="dist/chartist.min.js"></script>
 	</head>	
 
-	<body >
+	<body onload="pie_init()">
 		
 		<div class="w3-panel main ">
 										
@@ -27,14 +30,21 @@
 				</p>
 			</div>
 
-			<div>
-				<div>
-					<div class="w3-panel w3-card-4" style="width:45%;" >
+			
+
+			
+
+			<div class="w3-panel display-container" style="height:100%;border:solid 0px;padding:0px;"> <!-- Genrate + Input + Chart -->
+				
+				<div class="w3-cell w3-display-container" style="width:100%;"> <!-- Genratate + input -->
+				
+					<div> <!-- Generate word Section-->
+						<div class="w3-panel w3-card-4" style="width:100%;" >
 						<div>
 							<div>
 								<div>
 									<div class="w3-display-container w3-cell" style="width:150px;height:60px;"> <div class="w3-display-middle"> <button class="w3-btn w3-blue">Generate</button> </div> </div>
-									<div class="w3-display-container w3-cell" style="width:200px;height:60px;"> <div class="w3-display-middle"> <div class="w3-cell w3-center w3-margin-left w3-container" style="width:200px;" > <input type="text" class="w3-input"  placeholder="" style="width:150px;"> </div> </div> </div>
+									<div class="w3-display-container w3-cell" style="width:200px;height:60px;"> <div class="w3-display-middle"> <div class="w3-cell w3-center w3-margin-left w3-container" style="width:200px;" > <input type="text" class="w3-input w3-display-center"  placeholder="" style="width:150px;"> </div> </div> </div>
 								</div>
 								<div>
 									<div class="w3-display-container w3-cell" style="width:150px;height:60px;"> <div class="w3-display-middle"> <button class="w3-btn w3-blue">Check</button> </div> </div>
@@ -43,7 +53,11 @@
 							</div>
 						</div>
 					</div>
-					<div style="width:45%;">
+					</div>
+				
+					<div> <!-- Input a new word Section -->
+					
+					<div style="width:100%;">
 						<form class="w3-panel w3-card-4">
 							<p>
 							<label>Italian Word</label>
@@ -75,8 +89,21 @@
 							</div>
 						</form>
 					</div>
+					</div>
 				</div>
-			</div>
+
+				
+				<div class="w3-cell" style="border:solid 0px;padding-left:20px;"> <!--Pie Chart Section-->
+					
+					<div class="w3-card-4 w3-panel w3-center">
+						<div class="ct-chart" id="chart1"></div>
+					</div>
+				
+				</div>
+			
+			</div> <!-- End Input + chart -->
+
+
 
 			<div id="main-table" >
 				<table  class="w3-table w3-striped w3-hoverable w3-border w3-card-4">
