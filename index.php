@@ -4,11 +4,13 @@
 	<head>
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="dist/chartist.min.css">
+		<link rel="icon" href="bandiera.png">
 		<script src="script.js"></script>
 		<script src="charts_init.js"></script>
 		<script src="jquery.js"></script>
 		<script src="generate_random_word.js"></script>
 		<script src="dist/chartist.min.js"></script>
+		<title>Le mie parole</title>
 	</head>	
 
 	<body onload="chart_init()">
@@ -32,7 +34,7 @@
 			
 	
 
-			<div class="w3-panel display-container" style="height:100%;border:solid 0px;padding:0px;"> <!-- Genrate + Input + Chart -->
+			<div class="w3-panel display-container w3-cell-row" style="height:100%;border:solid 0px;padding:0px;"> <!-- Genrate + Input + Chart -->
 				
 				<div class="w3-cell w3-display-container" style="width:100%;"> <!-- Genratate + input -->
 				
@@ -41,7 +43,7 @@
 						<div>
 							<div>
 								<div>
-									<div class="w3-display-container w3-cell" style="width:270px;height:60px;"> <div class="w3-display-middle"> <button class="w3-btn w3-blue" onclick="gen_word()">Generate</button> </div> </div>
+									<div class="w3-display-container w3-cell" style="width:270px;height:60px;"> <div class="w3-display-left"> <button class="w3-btn w3-blue" onclick="gen_word()">Generate</button> </div> </div>
 									<div class="w3-display-container w3-cell" style="width:250px;height:60px;"> <div class="w3-display-middle"> <div class="w3-cell w3-center w3-margin-left w3-container" style="width:100px;" > <div class="w3-text-blue" id="quiz_o" >  </div> </div></div></div>
 									<div class="w3-display-container w3-cell" style="width:250px;height:60px;"> <div class="w3-display-middle"> <div class="w3-cell w3-center w3-margin-left w3-container" style="width:250px;" > <input type="text" class="w3-input w3-display-center" id="quiz_i" placeholder="answer here" style="width:150px;"> </div> </div> </div>
 								</div>
