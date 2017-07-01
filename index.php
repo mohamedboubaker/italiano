@@ -41,13 +41,13 @@
 						<div>
 							<div>
 								<div>
-									<div class="w3-display-container w3-cell" style="width:150px;height:60px;"> <div class="w3-display-middle"> <button class="w3-btn w3-blue" onclick="gen_word()">Generate</button> </div> </div>
-									<div class="w3-display-container w3-cell" style="width:250px;height:60px;"> <div class="w3-display-middle"> <div class="w3-cell w3-center w3-margin-left w3-container" style="width:250px;" > <input type="text" class="w3-input w3-display-center" id="quiz_io" placeholder="" style="width:200px;;"> </div> </div> </div>
-									
+									<div class="w3-display-container w3-cell" style="width:270px;height:60px;"> <div class="w3-display-middle"> <button class="w3-btn w3-blue" onclick="gen_word()">Generate</button> </div> </div>
+									<div class="w3-display-container w3-cell" style="width:250px;height:60px;"> <div class="w3-display-middle"> <div class="w3-cell w3-center w3-margin-left w3-container" style="width:100px;" > <div class="w3-text-blue" id="quiz_o" >  </div> </div></div></div>
+									<div class="w3-display-container w3-cell" style="width:250px;height:60px;"> <div class="w3-display-middle"> <div class="w3-cell w3-center w3-margin-left w3-container" style="width:250px;" > <input type="text" class="w3-input w3-display-center" id="quiz_i" placeholder="answer here" style="width:150px;"> </div> </div> </div>
 								</div>
 								<div>
-									<div class="w3-display-container w3-cell" style="width:150px;height:60px;"> <div class="w3-display-middle"> <button class="w3-btn w3-blue">Check</button> </div> </div>
-									<div class="w3-display-container w3-cell" style="width:200px;height:60px;"> <div class="w3-display-middle"> <div id="quizz-answer" class="w3-text-green w3-xlarge">  </div></div></div>
+									<div class="w3-display-container w3-cell" style="width:150px;height:60px;"> <div class="w3-display-middle"> <button onclick="check()" class="w3-btn w3-blue">Check</button> </div> </div>
+									<div class="w3-display-container w3-cell" style="width:200px;height:60px;"> <div class="w3-display-right"> <div id="quizz-answer" class="w3-xlarge"> </div></div></div>
 								</div>
 							</div>
 						</div>
